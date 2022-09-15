@@ -8,13 +8,18 @@
 </head>
 <body>
 <p>cid: <input type="text" id="input1"></p>
-<p>type(private or group): <input type="text" id="input2"></p>
-<button onclick="jump()">jump</button>
+<select id="select1">
+    <option value="private">private</option>
+    <option value="group">group</option>
+</select>
+<p>
+    <button onclick="jump()">jump</button>
+</p>
 </body>
    <script>
        function jump(){
            const cid = document.getElementById("input1").value;
-           const type = document.getElementById("input2").value;
+           const type = document.getElementById("select1").value;
            if(!cid || !type){
                alert("Please enter value");
                return;
