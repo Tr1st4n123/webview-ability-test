@@ -15,13 +15,12 @@
        function jump(){
            const cid = document.getElementById("input1").value;
            const type = document.getElementById("input2").value;
-
            if(!cid || cid){
                alert("Please enter value");
                return;
            }
            setupWKWebViewJavascriptBridge(function(bridge) {
-               bridge.callHandler('jumpMessage',{cid, type}, function(response) {
+               bridge.callHandler('jumpConversation',{cid, type}, function(response) {
                    console.error(response)
                });
            });
